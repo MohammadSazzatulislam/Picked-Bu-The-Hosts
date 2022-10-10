@@ -38,16 +38,6 @@ const Headers = () => {
             </li>
             <li className="font-semibold text-lg">
               <NavLink
-                to="/quizzes"
-                className={({ isActive }) =>
-                  isActive ? "text-orange-200" : undefined
-                }
-              >
-                Quizzes
-              </NavLink>
-            </li>
-            <li className="font-semibold text-lg">
-              <NavLink
                 to="/overview"
                 className={({ isActive }) =>
                   isActive ? "text-orange-200" : undefined
@@ -82,16 +72,6 @@ const Headers = () => {
               }
             >
               Home
-            </NavLink>
-          </li>
-          <li className="font-semibold text-lg">
-            <NavLink
-              to="/quizzes"
-              className={({ isActive }) =>
-                isActive ? "text-orange-200" : undefined
-              }
-            >
-              Quizzes
             </NavLink>
           </li>
           <li className="font-semibold text-lg">
