@@ -5,7 +5,7 @@ const Headers = () => {
   return (
     <div className="navbar bg-teal-700 text-white">
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown ">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -24,13 +24,13 @@ const Headers = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-teal-700 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-teal-700 hero-overlay rounded-box w-80"
           >
             <li className="font-semibold text-lg">
               <NavLink
-                to="/home"
+                to="/"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-500" : undefined
+                  isActive ? "text-orange-200" : undefined
                 }
               >
                 Home
@@ -40,7 +40,7 @@ const Headers = () => {
               <NavLink
                 to="/quizzes"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-500" : undefined
+                  isActive ? "text-orange-200" : undefined
                 }
               >
                 Quizzes
@@ -50,7 +50,7 @@ const Headers = () => {
               <NavLink
                 to="/overview"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-500" : undefined
+                  isActive ? "text-orange-200" : undefined
                 }
               >
                 Overview
@@ -60,7 +60,7 @@ const Headers = () => {
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-500" : undefined
+                  isActive ? "text-orange-200" : undefined
                 }
               >
                 Blog
@@ -68,7 +68,7 @@ const Headers = () => {
             </li>
           </ul>
         </div>
-        <NavLink to="/home" className="btn btn-ghost text-xl font-bold ">
+        <NavLink to="/" className="btn btn-ghost text-xl font-bold ">
           Picked By The Hosts
         </NavLink>
       </div>
@@ -76,9 +76,9 @@ const Headers = () => {
         <ul className="menu menu-horizontal p-0">
           <li className="font-semibold text-lg">
             <NavLink
-              to="/home"
+              to="/"
               className={({ isActive }) =>
-                isActive ? "text-blue-500" : undefined
+                isActive ? "text-orange-200" : undefined
               }
             >
               Home
@@ -88,7 +88,7 @@ const Headers = () => {
             <NavLink
               to="/quizzes"
               className={({ isActive }) =>
-                isActive ? "text-blue-500" : undefined
+                isActive ? "text-orange-200" : undefined
               }
             >
               Quizzes
@@ -98,7 +98,7 @@ const Headers = () => {
             <NavLink
               to="/overview"
               className={({ isActive }) =>
-                isActive ? "text-blue-500" : undefined
+                isActive ? "text-orange-200" : undefined
               }
             >
               Overview
@@ -108,7 +108,7 @@ const Headers = () => {
             <NavLink
               to="/blog"
               className={({ isActive }) =>
-                isActive ? "text-blue-500" : undefined
+                isActive ? "text-orange-200" : undefined
               }
             >
               Blog
@@ -125,13 +125,10 @@ const Headers = () => {
           </label>
           <ul
             tabIndex={0}
-            className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-teal-700 rounded-box w-52"
+            className="mt-3 p-2 shadow menu menu-compact dropdown-content hero-overlay bg-teal-700 rounded-box w-60"
           >
             <li>
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
+              <a>Profile</a>
             </li>
             <li>
               <a>Settings</a>
