@@ -1,3 +1,4 @@
+
 # Picked By The Hosts Assignment
 
 Project Live Site Link : (https://boisterous-mandazi-a4ea3a.netlify.app/)
@@ -6,6 +7,8 @@ Project Live Site Link : (https://boisterous-mandazi-a4ea3a.netlify.app/)
 
 This project use tailwind css and daisyui, animation use react aos and sweetalert2. And also use heroicons ,and use spa react router
 
+
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
