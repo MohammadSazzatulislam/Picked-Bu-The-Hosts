@@ -1,12 +1,16 @@
 import Headers from "../Headers/Headers";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLoaderData } from "react-router-dom";
+import { createContext } from "react";
+
+export const TopicContext = createContext([]);
 
 const Main = () => {
+  const topic = useLoaderData();
   return (
-    <div>
+    <TopicContext.Provider value={topic}>
       <Headers></Headers>
       <Outlet></Outlet>
-    </div>
+    </TopicContext.Provider>
   );
 };
 

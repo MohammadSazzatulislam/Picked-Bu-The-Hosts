@@ -1,35 +1,15 @@
-import { ToastContainer, toast } from "react-toastify";
 import Swal from "sweetalert2";
-import "react-toastify/dist/ReactToastify.css";
 
-const Quiz = ({quiz}) => {
+const Quiz = ({ quiz }) => {
   const { question, options, correctAnswer } = quiz;
 
   let cutQuestion = question.slice(3, -4);
 
   const handleQuizButton = (questionAnswer) => {
     if (questionAnswer === correctAnswer) {
-      toast.success("Right Answer", {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+      Swal.fire("Good job", "Right Answer", "success");
     } else {
-      toast.error("Wrong Answer", {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+      Swal.fire("Ops!", "Wrong Answer", "error");
     }
   };
 
@@ -39,12 +19,12 @@ const Quiz = ({quiz}) => {
 
   return (
     <div
-      data-aos="fade-up"
-      data-aos-anchor-placement="top-center"
+      data-aos="zoom-out"
+      data-aos-easing="linear"
+      data-aos-duration="500"
       className=" card shadow-2xl lg:w-4/5 rounded-sm md:w-4/5 h-auto w-full mx-auto mt-10 bg-fuchsia-900 text-white shadow-5xl"
     >
       <div className="flex justify-end pt-7 px-7 mb-0">
-        <ToastContainer />
         <svg
           onClick={handleAnswerButton}
           xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +53,7 @@ const Quiz = ({quiz}) => {
         <ul className="m-3 grid lg:grid-cols-2 grid-cols-1 gap-5 ">
           {options.map((option) => (
             <div className="form-control ">
-              <label className="cursor-pointer flex items-center">
+              <div className="cursor-pointer flex items-center">
                 <input
                   type="radio"
                   name="radio-6"
@@ -85,7 +65,7 @@ const Quiz = ({quiz}) => {
                 >
                   {option}
                 </span>
-              </label>
+              </div>
             </div>
           ))}
         </ul>

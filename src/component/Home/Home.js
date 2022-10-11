@@ -16,11 +16,13 @@ const Home = () => {
         ></div>
         <div className=" absolute text-center w-full py-4  text-neutral-content">
           <div className="max-w-md mx-auto">
-            <h1 className="mb-5 text-5xl font-bold ">Hello there</h1>
-            <p>
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+            <h1 className="mb-5 text-5xl font-bold font-mono italic">
+              Trivia quiz
+            </h1>
+            <p className="font-semibold italic">
+              To learn, you have to listen. To improve, you have to try.If you
+              truly love life don't wast time because time is what life is made
+              of
             </p>
           </div>
         </div>
