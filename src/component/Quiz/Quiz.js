@@ -2,19 +2,13 @@ import { ToastContainer, toast } from "react-toastify";
 import Swal from "sweetalert2";
 import "react-toastify/dist/ReactToastify.css";
 
+const Quiz = ({quiz}) => {
+  const { question, options, correctAnswer } = quiz;
 
-const Quiz = ({ quiz }) => {
-    const { question, options, correctAnswer } = quiz;
+  let cutQuestion = question.slice(3, -4);
 
-    console.log(correctAnswer);
-    
-  console.log(quiz);
-
-    const handleQuizButton = (questionAnswer) => {
-        console.log( questionAnswer);
-        
+  const handleQuizButton = (questionAnswer) => {
     if (questionAnswer === correctAnswer) {
-
       toast.success("Right Answer", {
         position: "top-center",
         autoClose: 1000,
@@ -25,8 +19,7 @@ const Quiz = ({ quiz }) => {
         progress: undefined,
         theme: "colored",
       });
-    }
-    else {
+    } else {
       toast.error("Wrong Answer", {
         position: "top-center",
         autoClose: 1000,
@@ -37,16 +30,19 @@ const Quiz = ({ quiz }) => {
         progress: undefined,
         theme: "colored",
       });
-    } 
+    }
   };
 
-    
   const handleAnswerButton = () => {
-   Swal.fire(`${correctAnswer}`);
+    Swal.fire(`${correctAnswer}`);
   };
 
   return (
-    <div className="card lg:w-4/5 md:w-4/5 h-auto w-full mx-auto mt-10 bg-base-300 shadow-5xl">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+      className=" card lg:w-4/5 md:w-4/5 h-auto w-full mx-auto mt-10 bg-base-300 shadow-5xl"
+    >
       <div className="flex justify-end pt-7 px-7 mb-0">
         <ToastContainer />
         <svg
@@ -56,7 +52,7 @@ const Quiz = ({ quiz }) => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-6 h-6"
+          className="w-6 h-6 cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -72,7 +68,7 @@ const Quiz = ({ quiz }) => {
       </div>
       <div className="card-body pt-5">
         <h2 className="lg:text-3xl md:text-2xl text-xl font-semibold ">
-          Quiz #: {question}
+          Quiz #: {cutQuestion}
         </h2>
         <ul className="m-3 grid lg:grid-cols-2 grid-cols-1 gap-5 ">
           {options.map((option) => (
@@ -82,7 +78,6 @@ const Quiz = ({ quiz }) => {
                   type="radio"
                   name="radio-6"
                   className="radio checked:bg-blue-500"
-                  checked
                 />
                 <span
                   onClick={(e) => handleQuizButton(e.target.innerText)}

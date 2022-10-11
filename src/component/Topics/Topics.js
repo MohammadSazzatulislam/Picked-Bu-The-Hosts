@@ -3,9 +3,9 @@ import { useLoaderData } from "react-router-dom";
 import Topic from "../Topic/Topic";
 
 const Topics = () => {
-  const data = useLoaderData();
-  const topics = data.data;
 
+  const data = useLoaderData()
+  const topics = data.data;
 
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5 w-full mx-auto gird-cols-1">
