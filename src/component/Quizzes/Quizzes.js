@@ -1,24 +1,18 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Quiz from "../Quiz/Quiz";
 
 const Quizzes = () => {
-  const quizzes = useLoaderData();
+  const data = useLoaderData();
+  const quizzes = data.data.questions;
 
-  console.log(quizzes.data.questions);
-
-    return (
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <div className="card-body">
-          <h2 className="card-title">Card title!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
-    );
-      
- 
+  return (
+    <div className="py-10">
+      {quizzes.map((quiz) => (
+        <Quiz key={quiz.id} quiz={quiz}></Quiz>
+      ))}
+    </div>
+  );
 };
 
 export default Quizzes;
