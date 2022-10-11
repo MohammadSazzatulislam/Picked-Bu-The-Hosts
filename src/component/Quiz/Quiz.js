@@ -2,7 +2,6 @@ import Swal from "sweetalert2";
 
 const Quiz = ({ quiz }) => {
   const { question, options, correctAnswer } = quiz;
-
   let cutQuestion = question.slice(3, -4);
 
   const handleQuizButton = (questionAnswer) => {
@@ -51,21 +50,20 @@ const Quiz = ({ quiz }) => {
           Quiz #: {cutQuestion}
         </h2>
         <ul className="m-3 grid lg:grid-cols-2 grid-cols-1 gap-5 ">
-          {options.map((option) => (
-            <div className="form-control ">
-              <div className="cursor-pointer flex items-center">
+          {options.map((option, index) => (
+            <div key={index} className="form-control">
+              <label className="label flex justify-between items-center cursor-pointer">
                 <input
-                  type="radio"
-                  name="radio-6"
-                  className="radio text-white border-2 border-slate-50 checked:bg-blue-500"
+                  type="checkbox"
+                  className="checkbox rounded-full border-2 mr-3 border-slate-50 text-white "
                 />
                 <span
                   onClick={(e) => handleQuizButton(e.target.innerText)}
-                  className="font-semibold lg:p-5  md:p-1 text-md lg:text-xl md:text-xl"
+                  className="text-white font-semibold text-xl w-full"
                 >
                   {option}
                 </span>
-              </div>
+              </label>
             </div>
           ))}
         </ul>

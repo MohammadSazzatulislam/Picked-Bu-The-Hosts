@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Picked By The Hosts Assignment
+
+Project Live Site Link : (https://boisterous-mandazi-a4ea3a.netlify.app/)
+
+## Available Fractures in this project
+
+This project use tailwind css and daisyui, animation use react aos and sweetalert2. And also use heroicons ,and use spa react router
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
