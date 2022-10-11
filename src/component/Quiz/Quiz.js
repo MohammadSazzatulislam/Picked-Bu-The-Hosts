@@ -41,7 +41,7 @@ const Quiz = ({quiz}) => {
     <div
       data-aos="fade-up"
       data-aos-anchor-placement="top-center"
-      className=" card lg:w-4/5 md:w-4/5 h-auto w-full mx-auto mt-10 bg-base-300 shadow-5xl"
+      className=" card shadow-2xl lg:w-4/5 rounded-sm md:w-4/5 h-auto w-full mx-auto mt-10 bg-fuchsia-900 text-white shadow-5xl"
     >
       <div className="flex justify-end pt-7 px-7 mb-0">
         <ToastContainer />
@@ -50,9 +50,9 @@ const Quiz = ({quiz}) => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          strokeWidth="1.5"
+          strokeWidth="2"
           stroke="currentColor"
-          className="w-6 h-6 cursor-pointer"
+          className="w-7 h-7 cursor-pointer hover:text-blue-400"
         >
           <path
             strokeLinecap="round"
@@ -77,7 +77,7 @@ const Quiz = ({quiz}) => {
                 <input
                   type="radio"
                   name="radio-6"
-                  className="radio checked:bg-blue-500"
+                  className="radio text-white border-2 border-slate-50 checked:bg-blue-500"
                 />
                 <span
                   onClick={(e) => handleQuizButton(e.target.innerText)}
