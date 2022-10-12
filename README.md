@@ -5,7 +5,19 @@ Project Live Site Link : (https://boisterous-mandazi-a4ea3a.netlify.app/)
 
 ## Available Fractures in this project
 
-This project use tailwind css and daisyui, animation use react aos and sweetalert2. And also use heroicons ,and use spa react router
+.This project use tailwind css and daisyui
+
+.Animation use react AOS and react toastify
+
+.And also use heroicons , react router
+
+# Quiz API Link
+
+Get all quiz topics: https://openapi.programming-hero.com/api/quiz
+
+Get topic details by topic id: https://openapi.programming-hero.com/api/quiz/${id}
+
+Example: https://openapi.programming-hero.com/api/quiz/1
 
 
 # Getting Started with Create React App

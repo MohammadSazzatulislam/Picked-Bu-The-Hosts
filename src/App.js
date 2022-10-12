@@ -11,11 +11,10 @@ function App() {
     AOS.refresh();
   }, []);
   return (
-    <div className="App">
+    <div>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
 
 export default App;
-

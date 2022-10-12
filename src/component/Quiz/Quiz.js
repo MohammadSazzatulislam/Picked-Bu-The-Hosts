@@ -1,4 +1,5 @@
-import Swal from "sweetalert2";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Quiz = ({ quiz }) => {
   const { question, options, correctAnswer } = quiz;
@@ -6,22 +7,49 @@ const Quiz = ({ quiz }) => {
 
   const handleQuizButton = (questionAnswer) => {
     if (questionAnswer === correctAnswer) {
-      Swal.fire("Good job", "Right Answer", "success");
+      toast.success(" Wow Right Answer", {
+        position: "bottom-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     } else {
-      Swal.fire("Ops!", "Wrong Answer", "error");
+      toast.error(" Ops! Wrong Answer", {
+        position: "bottom-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     }
   };
 
   const handleAnswerButton = () => {
-    Swal.fire(`${correctAnswer}`);
+    toast.info(`${correctAnswer}`, {
+      position: "bottom-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   };
 
   return (
     <div
-      data-aos="zoom-out"
+      data-aos="fade-down"
       data-aos-easing="linear"
       data-aos-duration="500"
-      className=" card shadow-2xl lg:w-4/5 rounded-sm md:w-4/5 h-auto w-full mx-auto mt-10 bg-fuchsia-900 text-white shadow-5xl"
+      className=" card lg:w-4/5 rounded-sm md:w-4/5 h-auto w-full mx-auto mt-10 bg-fuchsia-900 text-white shadow-5xl"
     >
       <div className="flex justify-end pt-7 px-7 mb-0">
         <svg
